@@ -57,7 +57,7 @@ body {
 
     /* Painel lateral compacto e moderno */
     .navbar-collapse {
-        position: fixed !important;
+        position: absolute !important;
         top: 0px;
         right: -180px !important;
         width: auto !important;
@@ -307,7 +307,7 @@ body {
 /* celulares médios */
 @media (max-width: 768px) {
     .faixa-principal {
-        height: 50px;
+        height: 40px;
     }
     .faixa-principal h1 {
         font-size: 1.4rem;
