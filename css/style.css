@@ -317,7 +317,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 40px;
+        height: 30px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
