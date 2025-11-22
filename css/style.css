@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    outline: 1px solid red !important;
+}
+
 :root {
     --verde-principal: #055902;
     --amarelo-button: #E9C904;
@@ -35,9 +39,9 @@ body {
 
 .custom-navbar {
     background-color: var(--verde-principal) !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
     padding: 15px 0;
     transition: all 0.3s ease-in-out;
+
 }
 
 /* .custom-navbar.fixed-top {
@@ -316,7 +320,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 50px;
+        height: 45px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
@@ -338,6 +342,9 @@ body {
 main {
     background-color: var(--white);
     margin-bottom: 50px;
+    overflow-x: clip !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 /* container da sessão */
@@ -345,7 +352,7 @@ main {
     gap: 0px !important;
     display: flex;
     margin-top: 20px;
-    padding: 0 20px; /* menos margem lateral */
+    /* padding: 0 20px; menos margem lateral */
 }
 
 .bloco-home > div {
