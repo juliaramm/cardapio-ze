@@ -307,7 +307,7 @@ body {
 /* celulares médios */
 @media (max-width: 768px) {
     .faixa-principal {
-        height: 40px;
+        height: 45px;
     }
     .faixa-principal h1 {
         font-size: 1.4rem;
@@ -317,7 +317,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 55px;
+        height: 40px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
@@ -327,7 +327,7 @@ body {
 /* celulares muito pequenos */
 @media (max-width: 360px) {
     .faixa-principal {
-        height: 50px;
+        height: 35px;
     }
     .faixa-principal h1 {
         font-size: 1rem;
