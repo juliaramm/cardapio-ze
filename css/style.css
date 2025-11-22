@@ -251,20 +251,20 @@ body {
 }
 @media (max-width: 840px) {
     .banner-principal {
-        height: 360px;
+        height: 420px;
     }
 }
 
 /* celular / responsivo */
 @media (max-width: 768px) {
     .banner-principal {
-        height: 340px;
+        height: 380px;
     }
 }
 
 @media (max-width: 480px) {
     .banner-principal {
-        height: 240px;
+        height: 340px;
     }
 }
 
@@ -317,7 +317,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 30px;
+        height: 40px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
