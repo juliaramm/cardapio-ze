@@ -246,25 +246,25 @@ body {
 /* tablet responsivo */
 @media (max-width: 1000px) {
     .banner-principal {
-        height: 450px;
+        height: 520px;
     }
 }
 @media (max-width: 840px) {
     .banner-principal {
-        height: 420px;
+        height: 450px;
     }
 }
 
 /* celular / responsivo */
 @media (max-width: 768px) {
     .banner-principal {
-        height: 380px;
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .banner-principal {
-        height: 340px;
+        height: 290px;
     }
 }
 
@@ -307,7 +307,7 @@ body {
 /* celulares médios */
 @media (max-width: 768px) {
     .faixa-principal {
-        height: 45px;
+        height: 55px;
     }
     .faixa-principal h1 {
         font-size: 1.4rem;
@@ -317,7 +317,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 40px;
+        height: 45px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
