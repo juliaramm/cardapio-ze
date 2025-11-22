@@ -20,8 +20,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background:var(--cinza-fundo);
     padding-top: 0px;
-    padding-left: 30px;
-    padding-right: 30px;
+    
 }
 
 .site-wrapper {
@@ -41,12 +40,12 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.custom-navbar.fixed-top {
+/* .custom-navbar.fixed-top {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     max-width: 1440px;
-}
+} */
 
 /* encolhe navbar ao rolar */
 .custom-navbar.scrolled {
@@ -264,7 +263,7 @@ body {
 
 @media (max-width: 480px) {
     .banner-principal {
-        height: 290px;
+        height: 250px;
     }
 }
 
@@ -297,7 +296,7 @@ body {
 /* tablets */
 @media (max-width: 992px) {
     .faixa-principal {
-        height: 45px;
+        height: 60px;
     }
     .faixa-principal h1 {
         font-size: 1.7rem;
@@ -307,7 +306,7 @@ body {
 /* celulares médios */
 @media (max-width: 768px) {
     .faixa-principal {
-        height: 55px;
+        height: 60px;
     }
     .faixa-principal h1 {
         font-size: 1.4rem;
@@ -317,7 +316,7 @@ body {
 /* celulares pequenos */
 @media (max-width: 480px) {
     .faixa-principal {
-        height: 45px;
+        height: 50px;
     }
     .faixa-principal h1 {
         font-size: 1.15rem;
