@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --verde-principal: #055902;
+    --amarelo-button: #E9C904;
+    --amarelo-hover: #c7aa04;
+    --azul-principal: #0F5A74;
+    --azul-hover: #0a3f54;
+    --azul-hover-claro: #e7dede;
+    --cinza-fundo: #f5f2f2;
+    --vermelho-preco: #FF0101;
+    --white: #ffffff;
+    --black: #000000;
+
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background:var(--cinza-fundo);
+    padding-top: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.site-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;      /* centraliza */
+    background-color: var(--white); /* opcional */
+}
+
+/* ============================
+   NAVBAR ESTILIZADA
+   ============================ */
+
+.custom-navbar {
+    background-color: var(--verde-principal) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar.fixed-top {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
+}
+
+/* encolhe navbar ao rolar */
+.custom-navbar.scrolled {
+    padding: 5px 0 !important;
+}
+
+@media (max-width: 1100px) {
+
+    /* Painel lateral compacto e moderno */
+    .navbar-collapse {
+        position: fixed !important;
+        top: 0px;
+        right: -180px !important;
+        width: auto !important;
+        max-width: 280px !important;
+        height: auto !important;
+        background: rgba(0, 0, 0, 0.221) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 14px 0 0 14px !important;
+        padding: 15px !important;
+        transition: right 0.28s ease-in-out;
+        box-shadow: -3px 4px 14px rgba(0,0,0,0.18) !important;
+        z-index: 9999 !important;
+        margin-top: 70px;
+    }
+
+    .navbar-collapse.show {
+        right: 0 !important;
+    }
+
+    /* Lista clean */
+    .navbar-nav {
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* >>> BOTÕES COM AS MESMAS CORES DO NAV DESKTOP <<< */
+    .nav-item a {
+        display: block !important;
+        width: 100% !important;
+        padding: 8px 0 !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        text-align: center !important;
+
+        /* CORES DO NAV DESKTOP */
+        background-color: var(--amarelo-button) !important;
+        color: var(--black) !important;
+
+        border-radius: 10px !important;
+        transition: 0.25s ease !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
+    }
+
+    /* >>> HOVER IGUAL AO DO DESKTOP <<< */
+    .nav-item a:hover {
+        background-color: var(--amarelo-hover) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15) !important;
+    } 
+
+    /* Botão sanduíche */
+    .navbar-toggler {
+        display: block !important;
+        border: none !important;
+        background: transparent !important;
+        padding: 4px !important;
+        transition: 0.2s ease;
+        z-index: 10000 !important;
+    }
+
+    .navbar-toggler:hover {
+        transform: scale(1.1) !important;
+    }
+
+    .navbar-toggler-icon {
+        width: 22px !important;
+        height: 22px !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 30 30'%3e%3cpath stroke='%23222' stroke-width='2.4' stroke-linecap='round' stroke-miterlimit='10' d='M5 8h20M5 15h20M5 22h20'/%3e%3c/svg%3e") !important;
+    }
+}
+
+/* ============================
+   LOGO RESPONSIVA
+   ============================ */
+
+.logo-header {
+    max-width: 230px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .logo-header {
+        max-width: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-header {
+        max-width: 230px;
+    }
+}
+
+/* ============================
+   TOGGLER (MENU MOBILE)
+   ============================ */
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 8px;
+    transition: 0.2s;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.15);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ============================
+   LINKS DO MENU
+   ============================ */
+
+.navbar-nav {
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-item a {
+    background-color: var(--amarelo-button);
+    color: var(--black) !important;
+    border-radius: 10px;
+    padding: 10px 20px !important;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+/* HOVER */
+.nav-item a:hover {
+    background-color: var(--amarelo-hover);
+    transform: translateY(-3px);
+}
+
+/* Estado ativo */
+.nav-item .active {
+    background-color: var(--amarelo-button);
+}
+
+/* ============================
+   MENU MOBILE ABERTO
+   ============================ */
+
+@media (max-width: 1100px) {
+    .navbar-collapse {
+        background-color: var(--verde-principal);
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        animation: slideDown 0.25s ease;
+    }
+
+    .nav-item a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== BANNER IMG PRINCIPAL ======== */
+
+.banner-principal {
+    max-width: 1440px; 
+    width: 100%;
+    height: 650px;      /* altura desejada */
+    margin: 0 auto;     /* centraliza */
+    overflow: hidden;   /* corta excesso */
+}
+
+.banner-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* mantém proporção SEM distorcer */
+    display: block;
+}
+
+/* tablet responsivo */
+@media (max-width: 1000px) {
+    .banner-principal {
+        height: 450px;
+    }
+}
+@media (max-width: 840px) {
+    .banner-principal {
+        height: 360px;
+    }
+}
+
+/* celular / responsivo */
+@media (max-width: 768px) {
+    .banner-principal {
+        height: 340px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-principal {
+        height: 240px;
+    }
+}
+
+/* ===== FAIXA PRINCIPAL ===== */
+
+.faixa-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    height: 50px;                      /* altura padrão */
+    background-color: var(--verde-principal);
+    padding: 0 20px;                   /* evita corte em telas pequenas */
+}
+
+.faixa-principal h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: var(--amarelo-button);
+    text-align: center;
+    font-size: 2rem;                   /* tamanho padrão */
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Responsividade faixa --- */
+
+/* tablets */
+@media (max-width: 992px) {
+    .faixa-principal {
+        height: 45px;
+    }
+    .faixa-principal h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* celulares médios */
+@media (max-width: 768px) {
+    .faixa-principal {
+        height: 50px;
+    }
+    .faixa-principal h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* celulares pequenos */
+@media (max-width: 480px) {
+    .faixa-principal {
+        height: 55px;
+    }
+    .faixa-principal h1 {
+        font-size: 1.15rem;
+    }
+}
+
+/* celulares muito pequenos */
+@media (max-width: 360px) {
+    .faixa-principal {
+        height: 50px;
+    }
+    .faixa-principal h1 {
+        font-size: 1rem;
+    }
+}
+
+/* === INICIO DO CONTEUDO DO HOME === */
+
+main {
+    background-color: var(--white);
+    margin-bottom: 50px;
+}
+
+/* container da sessão */
+.bloco-home {
+    gap: 0px !important;
+    display: flex;
+    margin-top: 20px;
+    padding: 0 20px; /* menos margem lateral */
+}
+
+.bloco-home > div {
+    display: flex;
+}
+
+/* card estilizado */
+.card-custom {
+    background-color: var(--cinza-fundo);
+    width: 100%;
+    max-width: none;
+    height: 340px;
+    flex: 1;
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* padding interno dos dois cards */
+.card-texto {
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* imagem ocupa o card todo */
+.card-imagem {
+    padding: 0 !important;
+    height: 100%;
+}
+
+.card-title {
+    display: inline-block;     /* fundo só no texto */
+    background-color:  var(--amarelo-button); /* cor do fundo */
+    color: var(--black);               /* cor do texto */
+    padding: 3px 12px;         /* espaço interno bonito */
+    border-radius: 15px;        /* cantos arredondados */
+    font-weight: bold;
+    
+}
+
+.card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* botões estilo azul */ 
+.btn-azul {
+    background-color: var(--azul-principal) !important;
+    color: var(--white) !important;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-azul:hover {
+    background-color: var(--azul-hover) !important;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: transparent !important;
+    color: var(--black) !important;
+    border: 1.5px solid #000 !important;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: 0.25s ease;
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul-hover-claro) !important; 
+    color: var(--black) !important;
+    transform: translateY(-2px);
+}
+
+/* dois botões lado a lado */
+.botoes-dupla {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.botoes-dupla .btn-azul {
+    flex: 1;          /* divide igualmente */
+    padding: 10px 0;  /* nunca vai quebrar */
+    white-space: nowrap; /* impede quebra de linha */
+}
+
+/* botão cheio */
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/* texto final */
+.info {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (min-width: 900px) {
+    .info {
+        margin-top: 2em;
+        font-size: 1rem;
+    }
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    .bloco-home {
+        flex-direction: column;
+    }
+    .bloco-home > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-custom {
+        max-width: 100%;
+        height: 340px;
+    }
+    .botoes-dupla {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
