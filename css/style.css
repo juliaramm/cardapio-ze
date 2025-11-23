@@ -352,7 +352,7 @@ main {
     gap: 0px !important;
     display: flex;
     margin-top: 20px;
-    /* padding: 0 20px; menos margem lateral */
+    padding: 0 20px; menos margem lateral
 }
 
 .bloco-home > div {
